@@ -2,6 +2,7 @@ from flask import Flask, render_template_string, request
 
 app = Flask(__name__)
 
+
 def validate_input(absences, prelim_exam, quizzes, requirements, recitation):
     errors = []
     try:
@@ -25,22 +26,28 @@ def validate_input(absences, prelim_exam, quizzes, requirements, recitation):
             errors.append(f"{name} must be a number.")
     return errors
 
+
 def attendance_score(absences):
     if absences >= 4:
         return 0, True  # 0 attendance, failed due to absences
     else:
         return max(0, 100 - absences * 10), False
 
+
 def class_standing(quizzes, requirements, recitation):
     return quizzes * 0.4 + requirements * 0.3 + recitation * 0.3
+
 
 def prelim_grade(prelim_exam, attendance, class_stand):
     return prelim_exam * 0.6 + attendance * 0.1 + class_stand * 0.3
 
+
 def required_grades(prelim, target):
     x = (target - 0.2 * prelim) / 0.8
-    if x < 0: x = 0
-    if x > 100: x = 100
+    if x < 0:
+        x = 0
+    if x > 100:
+        x = 100
     return round(x, 2), round(x, 2)
 
 
@@ -299,5 +306,3 @@ def index():
 if __name__ == "__main__":
 
     app.run(debug=True)
-
-
