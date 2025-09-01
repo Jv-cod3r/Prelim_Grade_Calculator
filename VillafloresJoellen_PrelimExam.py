@@ -189,11 +189,26 @@ index_template = '''
     </div>
     <div class="container2">
         <form method="post">
-            <label class="1">Absences: <input type="number" name="absences" min="0" required value="{{ request.form.absences or '' }}"></label><br>
-            <label class="2">Prelim Exam Grade: <input type="number" name="prelim_exam" min="0" max="100" required value="{{ request.form.prelim_exam or '' }}"></label><br>
-            <label class="3">Quizzes Grade: <input type="number" name="quizzes" min="0" max="100" required value="{{ request.form.quizzes or '' }}"></label><br>
-            <label class="4">Requirements Grade: <input type="number" name="requirements" min="0" max="100" required value="{{ request.form.requirements or '' }}"></label><br>
-            <label class="5">Recitation Grade: <input type="number" name="recitation" min="0" max="100" required value="{{ request.form.recitation or '' }}"></label><br>
+            <label class="1">Absences: 
+                <input type="number" name="absences" min="0" required 
+                value="{{ request.form.absences or '' }}">
+            </label><br>
+            <label class="2">Prelim Exam Grade: 
+                <input type="number" name="prelim_exam" min="0" max="100" required 
+                value="{{ request.form.prelim_exam or '' }}">
+            </label><br>
+            <label class="3">Quizzes Grade:
+                <input type="number" name="quizzes" min="0" max="100" required
+                value="{{ request.form.quizzes or '' }}">
+            </label>
+            <label class="4">Requirements Grade: 
+                <input type="number" name="requirements" min="0" max="100" required 
+                value="{{ request.form.requirements or '' }}">
+            </label><br>
+            <label class="5">Recitation Grade: 
+                <input type="number" name="recitation" min="0" max="100" required 
+                value="{{ request.form.recitation or '' }}">
+            </label><br>
             <input type="submit" value="Calculate">
         </form>
         {% if errors %}
@@ -279,5 +294,6 @@ def index():
     return render_template_string(index_template, result=result, errors=errors, request=request)
 
 if __name__ == "__main__":
+
 
     app.run(debug=True)
