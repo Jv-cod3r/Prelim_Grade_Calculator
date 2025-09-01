@@ -215,14 +215,20 @@ index_template = '''
                         <p class="pass">
                                 To PASS (75):
                             <p class="mfn1">Midterm & Final grades needed:</p>
-                            <p class="r2"><strong>{{ result.pass_pair[0] }}</strong> and <strong>{{ result.pass_pair[1] }}</strong></p>
+                            <p class="r2">
+                                <strong>{{ result.pass_pair[0] }}</strong> and 
+                                <strong>{{ result.pass_pair[1] }}</strong>
+                            </p>
                         </p><br>
                     {% endif %}
                     {% if result.deans_pair %}
                         <p class="dl">
                                 To qualify for Dean's List (90):<br>
                             <p class="mfn2">Midterm & Final grades needed:</p>
-                            <p class="r3"><strong>{{ result.deans_pair[0] }}</strong> and <strong>{{ result.deans_pair[1] }}</strong></p>
+                            <p class="r3">
+                                <strong>{{ result.deans_pair[0] }}</strong> and 
+                                <strong>{{ result.deans_pair[1] }}</strong>
+                            </p>
                         </p>
                     {% endif %}
                 </div>
@@ -232,6 +238,7 @@ index_template = '''
 </body>
 </html>
 '''
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -274,3 +281,4 @@ def index():
 if __name__ == "__main__":
 
     app.run(debug=True)
+
