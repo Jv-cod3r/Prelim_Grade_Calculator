@@ -216,7 +216,7 @@ index_template = '''
                                 To PASS (75):
                             <p class="mfn1">Midterm & Final grades needed:</p>
                             <p class="r2">
-                                <strong>{{ result.pass_pair[0] }}</strong> and 
+                                <strong>{{ result.pass_pair[0] }}</strong> and
                                 <strong>{{ result.pass_pair[1] }}</strong>
                             </p>
                         </p><br>
@@ -226,7 +226,7 @@ index_template = '''
                                 To qualify for Dean's List (90):<br>
                             <p class="mfn2">Midterm & Final grades needed:</p>
                             <p class="r3">
-                                <strong>{{ result.deans_pair[0] }}</strong> and 
+                                <strong>{{ result.deans_pair[0] }}</strong> and
                                 <strong>{{ result.deans_pair[1] }}</strong>
                             </p>
                         </p>
@@ -281,4 +281,3 @@ def index():
 if __name__ == "__main__":
 
     app.run(debug=True)
-
