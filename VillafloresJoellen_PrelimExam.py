@@ -222,7 +222,7 @@ index_template = '''
                         <p class="dl">
                                 To qualify for Dean's List (90):<br>
                             <p class="mfn2">Midterm & Final grades needed:</p>
-                            <p class="r3"><strong>{{ result.deans_pair[0] }}</strong> and <strong>{{ result.deans_pair[1] }}</strong></p>                        
+                            <p class="r3"><strong>{{ result.deans_pair[0] }}</strong> and <strong>{{ result.deans_pair[1] }}</strong></p>
                         </p>
                     {% endif %}
                 </div>
@@ -272,4 +272,5 @@ def index():
     return render_template_string(index_template, result=result, errors=errors, request=request)
 
 if __name__ == "__main__":
+
     app.run(debug=True)
