@@ -134,8 +134,8 @@ index_template = '''
                 padding: 8px 20px;
                 margin-top: 10px;
         }
-        .error { 
-                color: red; 
+        .error {
+                color: red;
         }
         .container3 {
                 margin: -411px 0 0 400px;
@@ -144,7 +144,7 @@ index_template = '''
                 align-items: flex-start;
                 line-height: 1.4;
         }
-        .result { 
+        .result {
                 background: maroon;
                 padding: 30px 40px;
                 border-radius: 10px;
@@ -182,7 +182,8 @@ index_template = '''
 </head>
 <body>
     <div class="logo">
-    <img src="https://perpetualdalta.edu.ph/new/wp-content/uploads/2025/01/UNIVERSITY-OF-PERPETUAL-HELP-SYSTEM-DALTA-Long-MOL-Campus-768x71.png" alt="Logo">
+    <img src="https://perpetualdalta.edu.ph/new/wp-content/uploads/2025/01/UNIVERSITY-OF-PERPETUAL-HELP-SYSTEM-DALTA-Long-MOL-Campus-768x71.png"
+         alt="Logo">
     </div>
     <div class="container1">
         <h1>Prelim Grade Calculator</h1>
@@ -297,3 +298,4 @@ def index():
 if __name__ == "__main__":
 
     app.run(debug=True)
+
