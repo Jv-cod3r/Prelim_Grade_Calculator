@@ -43,6 +43,7 @@ def required_grades(prelim, target):
     if x > 100: x = 100
     return round(x, 2), round(x, 2)
 
+
 index_template = '''
 <!doctype html>
 <html>
@@ -69,7 +70,7 @@ index_template = '''
                 height: auto;
                 width: 100%;
         }
-        h1 { 
+        h1 {
                 text-align: center;
                 background: maroon;
                 color: white;
@@ -182,8 +183,8 @@ index_template = '''
 </head>
 <body>
     <div class="logo">
-    <img src="https://perpetualdalta.edu.ph/new/wp-content/uploads/2025/01/UNIVERSITY-OF-PERPETUAL-HELP-SYSTEM-DALTA-Long-MOL-Campus-768x71.png"
-         alt="Logo">
+    <img src="https://perpetualdalta.edu.ph/new/wp-content/uploads/2025/01/
+            UNIVERSITY-OF-PERPETUAL-HELP-SYSTEM-DALTA-Long-MOL-Campus-768x71.png" alt="Logo">
     </div>
     <div class="container1">
         <h1>Prelim Grade Calculator</h1>
@@ -298,4 +299,5 @@ def index():
 if __name__ == "__main__":
 
     app.run(debug=True)
+
 
